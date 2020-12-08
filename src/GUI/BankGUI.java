@@ -29,101 +29,103 @@ public class BankGUI extends javax.swing.JFrame {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
         homePage = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
+        welcomeTxt = new javax.swing.JLabel();
         depositPage = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        lblDeposit = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         depsoitBtn = new javax.swing.JButton();
-        acctNumber = new javax.swing.JTextField();
+        acctNumberDeposit = new javax.swing.JTextField();
         depositAmt = new javax.swing.JTextField();
         withdrawPage = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
+        lblWithdraw = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        acctNumber1 = new javax.swing.JTextField();
+        acctNumberWithdraw = new javax.swing.JTextField();
         withdrawAmt = new javax.swing.JTextField();
         withdrawBtn = new javax.swing.JButton();
         transferPage = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
+        lblTransfer = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        acctNumTransferFrom = new javax.swing.JTextField();
+        acctNumTransferTo = new javax.swing.JTextField();
+        transferAmt = new javax.swing.JTextField();
         makePaymentPage = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
+        lblMakePayment = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         paymentAmount = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        acctNumber2 = new javax.swing.JTextField();
+        makePaymentBtn = new javax.swing.JButton();
+        acctNumberMakePayment = new javax.swing.JTextField();
         addAcctPage = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
+        lblAddAcct = new javax.swing.JLabel();
         deleteAcctPage = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        acctNumber3 = new javax.swing.JTextField();
+        lblRemoveAcct = new javax.swing.JLabel();
+        acctNumberRemoveAcct = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        removeAcctBtn = new javax.swing.JToggleButton();
         acctDetailPage = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
+        lblAcctDetails = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        acctNumber4 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        acctNumberViewDetails = new javax.swing.JTextField();
+        jScrollPane = new javax.swing.JScrollPane();
         acctDetailsTxtBox = new javax.swing.JTextArea();
-        jButton4 = new javax.swing.JButton();
+        ViewAcctDetailsBtn = new javax.swing.JButton();
         bankDetailsPage = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
+        lblBankDetails = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         bankDetailsTxtBox = new javax.swing.JTextArea();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem8 = new javax.swing.JMenuItem();
+        bankMenuBar = new javax.swing.JMenuBar();
+        menuTransactions = new javax.swing.JMenu();
+        menuDeposit = new javax.swing.JMenuItem();
+        menuWithdraw = new javax.swing.JMenuItem();
+        menuTransfer = new javax.swing.JMenuItem();
+        menuPayments = new javax.swing.JMenu();
+        menuMakePayment = new javax.swing.JMenuItem();
+        menuAccts = new javax.swing.JMenu();
+        menuCreateAcct = new javax.swing.JMenuItem();
+        menuRemoveAcct = new javax.swing.JMenuItem();
+        menuViewAcct = new javax.swing.JMenuItem();
+        menuBank = new javax.swing.JMenu();
+        menuBankDetails = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Main Page");
-        setName("Main Page"); // NOI18N
+        setName("BankGUI"); // NOI18N
 
         jLayeredPane1.setLayout(new java.awt.CardLayout());
 
-        jLabel7.setText("Welcome");
+        welcomeTxt.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
+        welcomeTxt.setForeground(new java.awt.Color(2, 3, 2));
+        welcomeTxt.setText("Welcome");
 
         javax.swing.GroupLayout homePageLayout = new javax.swing.GroupLayout(homePage);
         homePage.setLayout(homePageLayout);
         homePageLayout.setHorizontalGroup(
             homePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homePageLayout.createSequentialGroup()
-                .addGap(258, 258, 258)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(368, Short.MAX_VALUE))
+                .addGap(247, 247, 247)
+                .addComponent(welcomeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(252, Short.MAX_VALUE))
         );
         homePageLayout.setVerticalGroup(
             homePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homePageLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jLabel7)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addGap(93, 93, 93)
+                .addComponent(welcomeTxt)
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(homePage, "card2");
 
         depositPage.setMinimumSize(new java.awt.Dimension(10, 10));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel3.setText("Deposit");
-        jLabel3.setOpaque(true);
+        lblDeposit.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblDeposit.setText("Deposit");
+        lblDeposit.setOpaque(true);
 
         jLabel5.setText("Please enter the account number you would like to deposit to:");
         jLabel5.setOpaque(true);
@@ -133,9 +135,9 @@ public class BankGUI extends javax.swing.JFrame {
 
         depsoitBtn.setText("Deposit");
 
-        acctNumber.addActionListener(new java.awt.event.ActionListener() {
+        acctNumberDeposit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                acctNumberActionPerformed(evt);
+                acctNumberDepositActionPerformed(evt);
             }
         });
 
@@ -146,31 +148,31 @@ public class BankGUI extends javax.swing.JFrame {
             .addGroup(depositPageLayout.createSequentialGroup()
                 .addGroup(depositPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(depositPageLayout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(depositPageLayout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addGroup(depositPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(depositPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(acctNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(acctNumberDeposit, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(depositAmt, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(depositPageLayout.createSequentialGroup()
                         .addGap(264, 264, 264)
-                        .addComponent(depsoitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(depsoitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(depositPageLayout.createSequentialGroup()
+                        .addGap(286, 286, 286)
+                        .addComponent(lblDeposit, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(201, Short.MAX_VALUE))
         );
         depositPageLayout.setVerticalGroup(
             depositPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(depositPageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblDeposit, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addGroup(depositPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(acctNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(acctNumberDeposit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(depositPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -182,16 +184,16 @@ public class BankGUI extends javax.swing.JFrame {
 
         jLayeredPane1.add(depositPage, "card3");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel8.setText("Withdraw");
+        lblWithdraw.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblWithdraw.setText("Withdraw");
 
         jLabel9.setText("Please enter the account number you would like to withdraw from:");
 
         jLabel10.setText("Please enter the amount you would like to withdraw:");
 
-        acctNumber1.addActionListener(new java.awt.event.ActionListener() {
+        acctNumberWithdraw.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                acctNumber1ActionPerformed(evt);
+                acctNumberWithdrawActionPerformed(evt);
             }
         });
 
@@ -203,33 +205,35 @@ public class BankGUI extends javax.swing.JFrame {
             withdrawPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(withdrawPageLayout.createSequentialGroup()
                 .addGroup(withdrawPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(withdrawPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(withdrawPageLayout.createSequentialGroup()
-                            .addGap(244, 244, 244)
-                            .addGroup(withdrawPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(withdrawBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(withdrawPageLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(withdrawPageLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(56, 56, 56)
-                .addGroup(withdrawPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(withdrawAmt, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(acctNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(withdrawPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(withdrawPageLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(withdrawPageLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(56, 56, 56)
+                        .addGroup(withdrawPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(withdrawAmt, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(acctNumberWithdraw, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(withdrawPageLayout.createSequentialGroup()
+                        .addGap(279, 279, 279)
+                        .addComponent(lblWithdraw, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(withdrawPageLayout.createSequentialGroup()
+                        .addGap(286, 286, 286)
+                        .addComponent(withdrawBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(57, 158, Short.MAX_VALUE))
         );
         withdrawPageLayout.setVerticalGroup(
             withdrawPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(withdrawPageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel8)
+                .addComponent(lblWithdraw)
                 .addGap(28, 28, 28)
                 .addGroup(withdrawPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(acctNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(acctNumberWithdraw, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(withdrawPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
@@ -241,8 +245,8 @@ public class BankGUI extends javax.swing.JFrame {
 
         jLayeredPane1.add(withdrawPage, "card4");
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel11.setText("Transfer Funds");
+        lblTransfer.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblTransfer.setText("Transfer Funds");
 
         jLabel12.setText("Please enter the account number you would like to transfer from:");
 
@@ -257,9 +261,9 @@ public class BankGUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        acctNumTransferFrom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                acctNumTransferFromActionPerformed(evt);
             }
         });
 
@@ -276,13 +280,13 @@ public class BankGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextField4)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(acctNumTransferTo)
+                        .addComponent(transferAmt, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(acctNumTransferFrom, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(143, Short.MAX_VALUE))
             .addGroup(transferPageLayout.createSequentialGroup()
                 .addGap(246, 246, 246)
-                .addComponent(jLabel11)
+                .addComponent(lblTransfer)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transferPageLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -293,7 +297,7 @@ public class BankGUI extends javax.swing.JFrame {
             transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(transferPageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11)
+                .addComponent(lblTransfer)
                 .addGap(18, 18, 18)
                 .addGroup(transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(transferPageLayout.createSequentialGroup()
@@ -301,12 +305,12 @@ public class BankGUI extends javax.swing.JFrame {
                         .addGap(24, 24, 24)
                         .addGroup(transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(acctNumTransferTo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel14)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(transferAmt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(acctNumTransferFrom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addComponent(jButton2)
                 .addContainerGap(37, Short.MAX_VALUE))
@@ -314,18 +318,18 @@ public class BankGUI extends javax.swing.JFrame {
 
         jLayeredPane1.add(transferPage, "card5");
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel15.setText("Make a Payment");
+        lblMakePayment.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblMakePayment.setText("Make a Payment");
 
         jLabel16.setText("Please enter the account number you would like to make a payment to:");
 
         jLabel17.setText("Please enter the amount you would like to pay:");
 
-        jButton3.setText("Make Payment");
+        makePaymentBtn.setText("Make Payment");
 
-        acctNumber2.addActionListener(new java.awt.event.ActionListener() {
+        acctNumberMakePayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                acctNumber2ActionPerformed(evt);
+                acctNumberMakePaymentActionPerformed(evt);
             }
         });
 
@@ -335,7 +339,7 @@ public class BankGUI extends javax.swing.JFrame {
             makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, makePaymentPageLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel15)
+                .addComponent(lblMakePayment)
                 .addGap(228, 228, 228))
             .addGroup(makePaymentPageLayout.createSequentialGroup()
                 .addGap(42, 42, 42)
@@ -345,35 +349,35 @@ public class BankGUI extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addGroup(makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(paymentAmount, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                    .addComponent(acctNumber2))
+                    .addComponent(acctNumberMakePayment))
                 .addContainerGap(83, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, makePaymentPageLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(makePaymentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(272, 272, 272))
         );
         makePaymentPageLayout.setVerticalGroup(
             makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(makePaymentPageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel15)
+                .addComponent(lblMakePayment)
                 .addGap(26, 26, 26)
                 .addGroup(makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
-                    .addComponent(acctNumber2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(acctNumberMakePayment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(paymentAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
-                .addComponent(jButton3)
+                .addComponent(makePaymentBtn)
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(makePaymentPage, "card6");
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel18.setText("Add an Account");
+        lblAddAcct.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblAddAcct.setText("Add an Account");
 
         javax.swing.GroupLayout addAcctPageLayout = new javax.swing.GroupLayout(addAcctPage);
         addAcctPage.setLayout(addAcctPageLayout);
@@ -381,31 +385,31 @@ public class BankGUI extends javax.swing.JFrame {
             addAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addAcctPageLayout.createSequentialGroup()
                 .addContainerGap(250, Short.MAX_VALUE)
-                .addComponent(jLabel18)
+                .addComponent(lblAddAcct)
                 .addGap(245, 245, 245))
         );
         addAcctPageLayout.setVerticalGroup(
             addAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addAcctPageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel18)
+                .addComponent(lblAddAcct)
                 .addContainerGap(202, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(addAcctPage, "card7");
 
-        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel19.setText("Remove an Account");
+        lblRemoveAcct.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblRemoveAcct.setText("Remove an Account");
 
-        acctNumber3.addActionListener(new java.awt.event.ActionListener() {
+        acctNumberRemoveAcct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                acctNumber3ActionPerformed(evt);
+                acctNumberRemoveAcctActionPerformed(evt);
             }
         });
 
         jLabel20.setText("Please enter the account number of the account you would like to remove:");
 
-        jToggleButton1.setText("Remove Account");
+        removeAcctBtn.setText("Remove Account");
 
         javax.swing.GroupLayout deleteAcctPageLayout = new javax.swing.GroupLayout(deleteAcctPage);
         deleteAcctPage.setLayout(deleteAcctPageLayout);
@@ -415,42 +419,42 @@ public class BankGUI extends javax.swing.JFrame {
                 .addGap(55, 55, 55)
                 .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
                 .addGap(27, 27, 27)
-                .addComponent(acctNumber3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(acctNumberRemoveAcct, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(114, 114, 114))
             .addGroup(deleteAcctPageLayout.createSequentialGroup()
                 .addGroup(deleteAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(deleteAcctPageLayout.createSequentialGroup()
                         .addGap(223, 223, 223)
-                        .addComponent(jLabel19))
+                        .addComponent(lblRemoveAcct))
                     .addGroup(deleteAcctPageLayout.createSequentialGroup()
                         .addGap(277, 277, 277)
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(removeAcctBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         deleteAcctPageLayout.setVerticalGroup(
             deleteAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(deleteAcctPageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel19)
+                .addComponent(lblRemoveAcct)
                 .addGap(40, 40, 40)
                 .addGroup(deleteAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(acctNumber3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(acctNumberRemoveAcct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
-                .addComponent(jToggleButton1)
+                .addComponent(removeAcctBtn)
                 .addContainerGap(74, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(deleteAcctPage, "card8");
 
-        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel21.setText("View Account Details");
+        lblAcctDetails.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblAcctDetails.setText("View Account Details");
 
         jLabel22.setText("Please enter the account number of the account you would like to see the details of:");
 
-        acctNumber4.addActionListener(new java.awt.event.ActionListener() {
+        acctNumberViewDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                acctNumber4ActionPerformed(evt);
+                acctNumberViewDetailsActionPerformed(evt);
             }
         });
 
@@ -458,12 +462,12 @@ public class BankGUI extends javax.swing.JFrame {
         acctDetailsTxtBox.setColumns(20);
         acctDetailsTxtBox.setRows(5);
         acctDetailsTxtBox.setText("Account details...");
-        jScrollPane1.setViewportView(acctDetailsTxtBox);
+        jScrollPane.setViewportView(acctDetailsTxtBox);
 
-        jButton4.setText("View Account Details");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        ViewAcctDetailsBtn.setText("View Account Details");
+        ViewAcctDetailsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                ViewAcctDetailsBtnActionPerformed(evt);
             }
         });
 
@@ -475,42 +479,42 @@ public class BankGUI extends javax.swing.JFrame {
                 .addGroup(acctDetailPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(acctDetailPageLayout.createSequentialGroup()
                         .addGap(212, 212, 212)
-                        .addComponent(jLabel21))
+                        .addComponent(lblAcctDetails))
                     .addGroup(acctDetailPageLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
-                        .addComponent(acctNumber4, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(acctNumberViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(113, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, acctDetailPageLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(acctDetailPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, acctDetailPageLayout.createSequentialGroup()
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ViewAcctDetailsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(262, 262, 262))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, acctDetailPageLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(138, 138, 138))))
         );
         acctDetailPageLayout.setVerticalGroup(
             acctDetailPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(acctDetailPageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel21)
+                .addComponent(lblAcctDetails)
                 .addGap(18, 18, 18)
                 .addGroup(acctDetailPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel22)
-                    .addComponent(acctNumber4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(acctNumberViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(ViewAcctDetailsBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
+                .addComponent(jScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(acctDetailPage, "card9");
 
-        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel23.setText("View Bank Details");
+        lblBankDetails.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lblBankDetails.setText("View Bank Details");
 
         bankDetailsTxtBox.setEditable(false);
         bankDetailsTxtBox.setColumns(20);
@@ -525,7 +529,7 @@ public class BankGUI extends javax.swing.JFrame {
                 .addContainerGap(154, Short.MAX_VALUE)
                 .addGroup(bankDetailsPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bankDetailsPageLayout.createSequentialGroup()
-                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblBankDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(218, 218, 218))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bankDetailsPageLayout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -535,7 +539,7 @@ public class BankGUI extends javax.swing.JFrame {
             bankDetailsPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bankDetailsPageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel23)
+                .addComponent(lblBankDetails)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(28, Short.MAX_VALUE))
@@ -543,92 +547,92 @@ public class BankGUI extends javax.swing.JFrame {
 
         jLayeredPane1.add(bankDetailsPage, "card10");
 
-        jMenu1.setText("Transactions");
+        menuTransactions.setText("Transactions");
 
-        jMenuItem1.setText("Deposit");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        menuDeposit.setText("Deposit");
+        menuDeposit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                menuDepositActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        menuTransactions.add(menuDeposit);
 
-        jMenuItem2.setText("Withdraw");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        menuWithdraw.setText("Withdraw");
+        menuWithdraw.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                menuWithdrawActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        menuTransactions.add(menuWithdraw);
 
-        jMenuItem3.setText("Transfer Funds");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        menuTransfer.setText("Transfer");
+        menuTransfer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                menuTransferActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem3);
+        menuTransactions.add(menuTransfer);
 
-        jMenuBar1.add(jMenu1);
+        bankMenuBar.add(menuTransactions);
 
-        jMenu2.setText("Payments");
+        menuPayments.setText("Payments");
 
-        jMenuItem4.setText("Make a Payment");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        menuMakePayment.setText("Make a Payment");
+        menuMakePayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                menuMakePaymentActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem4);
+        menuPayments.add(menuMakePayment);
 
-        jMenuBar1.add(jMenu2);
+        bankMenuBar.add(menuPayments);
 
-        jMenu3.setText("Accounts");
-        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+        menuAccts.setText("Accounts");
+        menuAccts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu3ActionPerformed(evt);
+                menuAcctsActionPerformed(evt);
             }
         });
 
-        jMenuItem5.setText("Create an Account");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        menuCreateAcct.setText("Create an Account");
+        menuCreateAcct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                menuCreateAcctActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem5);
+        menuAccts.add(menuCreateAcct);
 
-        jMenuItem6.setText("Delete an Account");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        menuRemoveAcct.setText("Delete an Account");
+        menuRemoveAcct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                menuRemoveAcctActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem6);
+        menuAccts.add(menuRemoveAcct);
 
-        jMenuItem7.setText("View Account Details");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        menuViewAcct.setText("View Account Details");
+        menuViewAcct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                menuViewAcctActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem7);
+        menuAccts.add(menuViewAcct);
 
-        jMenuBar1.add(jMenu3);
+        bankMenuBar.add(menuAccts);
 
-        jMenu4.setText("Bank");
+        menuBank.setText("Bank");
 
-        jMenuItem8.setText("View Bank Details");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        menuBankDetails.setText("View Bank Details");
+        menuBankDetails.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                menuBankDetailsActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem8);
+        menuBank.add(menuBankDetails);
 
-        jMenuBar1.add(jMenu4);
+        bankMenuBar.add(menuBank);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(bankMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -647,116 +651,118 @@ public class BankGUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        getAccessibleContext().setAccessibleName("");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     
     
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void menuTransferActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTransferActionPerformed
         // TODO add your handling code here:
         jLayeredPane1.removeAll();
         jLayeredPane1.add(transferPage);
         jLayeredPane1.repaint();
         jLayeredPane1.revalidate();
         
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_menuTransferActionPerformed
 
-    private void acctNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acctNumberActionPerformed
+    private void acctNumberDepositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acctNumberDepositActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_acctNumberActionPerformed
+    }//GEN-LAST:event_acctNumberDepositActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void menuDepositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDepositActionPerformed
         // TODO add your handling code here:
         jLayeredPane1.removeAll();
         jLayeredPane1.add(depositPage);
         jLayeredPane1.repaint();
         jLayeredPane1.revalidate();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_menuDepositActionPerformed
 
-    private void acctNumber1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acctNumber1ActionPerformed
+    private void acctNumberWithdrawActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acctNumberWithdrawActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_acctNumber1ActionPerformed
+    }//GEN-LAST:event_acctNumberWithdrawActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void menuWithdrawActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuWithdrawActionPerformed
         // TODO add your handling code here:
         jLayeredPane1.removeAll();
         jLayeredPane1.add(withdrawPage);
         jLayeredPane1.repaint();
         jLayeredPane1.revalidate();
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_menuWithdrawActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void acctNumTransferFromActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acctNumTransferFromActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_acctNumTransferFromActionPerformed
 
-    private void acctNumber2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acctNumber2ActionPerformed
+    private void acctNumberMakePaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acctNumberMakePaymentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_acctNumber2ActionPerformed
+    }//GEN-LAST:event_acctNumberMakePaymentActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void menuMakePaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuMakePaymentActionPerformed
         // TODO add your handling code here:
         jLayeredPane1.removeAll();
         jLayeredPane1.add(makePaymentPage);
         jLayeredPane1.repaint();
         jLayeredPane1.revalidate();
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_menuMakePaymentActionPerformed
 
-    private void acctNumber3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acctNumber3ActionPerformed
+    private void acctNumberRemoveAcctActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acctNumberRemoveAcctActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_acctNumber3ActionPerformed
+    }//GEN-LAST:event_acctNumberRemoveAcctActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void menuCreateAcctActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCreateAcctActionPerformed
         // TODO add your handling code here:
         jLayeredPane1.removeAll();
         jLayeredPane1.add(addAcctPage);
         jLayeredPane1.repaint();
         jLayeredPane1.revalidate();
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_menuCreateAcctActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void menuRemoveAcctActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRemoveAcctActionPerformed
         // TODO add your handling code here:
         jLayeredPane1.removeAll();
         jLayeredPane1.add(deleteAcctPage);
         jLayeredPane1.repaint();
         jLayeredPane1.revalidate();
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_menuRemoveAcctActionPerformed
 
-    private void acctNumber4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acctNumber4ActionPerformed
+    private void acctNumberViewDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acctNumberViewDetailsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_acctNumber4ActionPerformed
+    }//GEN-LAST:event_acctNumberViewDetailsActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void ViewAcctDetailsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewAcctDetailsBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_ViewAcctDetailsBtnActionPerformed
 
-    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+    private void menuAcctsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAcctsActionPerformed
         // TODO add your handling code here:
         jLayeredPane1.removeAll();
         jLayeredPane1.add(acctDetailPage);
         jLayeredPane1.repaint();
         jLayeredPane1.revalidate();
-    }//GEN-LAST:event_jMenu3ActionPerformed
+    }//GEN-LAST:event_menuAcctsActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    private void menuBankDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBankDetailsActionPerformed
         // TODO add your handling code here:
         jLayeredPane1.removeAll();
         jLayeredPane1.add(bankDetailsPage);
         jLayeredPane1.repaint();
         jLayeredPane1.revalidate();
         //display bank info in the textbox
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    }//GEN-LAST:event_menuBankDetailsActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void menuViewAcctActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuViewAcctActionPerformed
         // TODO add your handling code here:
         jLayeredPane1.removeAll();
         jLayeredPane1.add(acctDetailPage);
         jLayeredPane1.repaint();
         jLayeredPane1.revalidate();
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_menuViewAcctActionPerformed
 
     /**
      * @param args the command line arguments
@@ -794,16 +800,20 @@ public class BankGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ViewAcctDetailsBtn;
     private javax.swing.JPanel acctDetailPage;
     private javax.swing.JTextArea acctDetailsTxtBox;
-    private javax.swing.JTextField acctNumber;
-    private javax.swing.JTextField acctNumber1;
-    private javax.swing.JTextField acctNumber2;
-    private javax.swing.JTextField acctNumber3;
-    private javax.swing.JTextField acctNumber4;
+    private javax.swing.JTextField acctNumTransferFrom;
+    private javax.swing.JTextField acctNumTransferTo;
+    private javax.swing.JTextField acctNumberDeposit;
+    private javax.swing.JTextField acctNumberMakePayment;
+    private javax.swing.JTextField acctNumberRemoveAcct;
+    private javax.swing.JTextField acctNumberViewDetails;
+    private javax.swing.JTextField acctNumberWithdraw;
     private javax.swing.JPanel addAcctPage;
     private javax.swing.JPanel bankDetailsPage;
     private javax.swing.JTextArea bankDetailsTxtBox;
+    private javax.swing.JMenuBar bankMenuBar;
     private javax.swing.JPanel deleteAcctPage;
     private javax.swing.JTextField depositAmt;
     private javax.swing.JPanel depositPage;
@@ -811,57 +821,53 @@ public class BankGUI extends javax.swing.JFrame {
     private javax.swing.JPanel homePage;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JLabel lblAcctDetails;
+    private javax.swing.JLabel lblAddAcct;
+    private javax.swing.JLabel lblBankDetails;
+    private javax.swing.JLabel lblDeposit;
+    private javax.swing.JLabel lblMakePayment;
+    private javax.swing.JLabel lblRemoveAcct;
+    private javax.swing.JLabel lblTransfer;
+    private javax.swing.JLabel lblWithdraw;
+    private javax.swing.JButton makePaymentBtn;
     private javax.swing.JPanel makePaymentPage;
+    private javax.swing.JMenu menuAccts;
+    private javax.swing.JMenu menuBank;
+    private javax.swing.JMenuItem menuBankDetails;
+    private javax.swing.JMenuItem menuCreateAcct;
+    private javax.swing.JMenuItem menuDeposit;
+    private javax.swing.JMenuItem menuMakePayment;
+    private javax.swing.JMenu menuPayments;
+    private javax.swing.JMenuItem menuRemoveAcct;
+    private javax.swing.JMenu menuTransactions;
+    private javax.swing.JMenuItem menuTransfer;
+    private javax.swing.JMenuItem menuViewAcct;
+    private javax.swing.JMenuItem menuWithdraw;
     private javax.swing.JTextField paymentAmount;
+    private javax.swing.JToggleButton removeAcctBtn;
+    private javax.swing.JTextField transferAmt;
     private javax.swing.JPanel transferPage;
+    private javax.swing.JLabel welcomeTxt;
     private javax.swing.JTextField withdrawAmt;
     private javax.swing.JButton withdrawBtn;
     private javax.swing.JPanel withdrawPage;
