@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package GUI;
 /**
  *
  * @author makeafide
@@ -15,6 +15,11 @@ public class BankApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
+        Employee currEmployee = new Employee();
+        currEmployee.employees.add(new Employee("William",01,2789));
+        
     }
     
 }

@@ -4,36 +4,37 @@
  * and open the template in the editor.
  */
 
+package GUI;
+
 /**
  *
  * @author makeafide
  */
-public class Account extends Customer {
+public class Account {
     //Class Vars
-    int accountNum,numOfAccounts;
-    double balance, endOfMonthBalance;
-    Customer customerInfo;
+    private int accountNum,numOfAccounts;
+    private double balance, endOfMonthBalance;
+  
+    
     //Constructors 
     public Account (){}
-    public Account (int accountNum, int numOfAccounts, double balance, Customer customerInfo){
-    this.accountNum = accountNum;
-    this.numOfAccounts = numOfAccounts;
-    this.balance = balance;
-    this.customerInfo = customerInfo;
+    public Account (int accountNum, int numOfAccounts, double balance){
+     this.accountNum = accountNum;
+     this.numOfAccounts = numOfAccounts;
+     this.balance = balance;
     }
-    public Account (int accountNum, int numOfAccounts, double balance, double endOfMonthBalance, Customer customerInfo){
-    this.accountNum = accountNum;
-    this.numOfAccounts = numOfAccounts;
-    this.balance = balance;
-    this.endOfMonthBalance = endOfMonthBalance;
-    this.customerInfo = customerInfo;
+    public Account (int accountNum, int numOfAccounts, double balance, double endOfMonthBalance){
+        this.accountNum = accountNum;
+        this.numOfAccounts = numOfAccounts;
+        this.balance = balance;
+        this.endOfMonthBalance = endOfMonthBalance;
     }
     
     // Setters and Getters
      public void setAccountNum(int accountNum){
        this.accountNum = accountNum;
     }
-    public int getNumOfTransactions(){
+    public int getAccountNum(){
         return(this.accountNum);
     }
     
@@ -57,13 +58,5 @@ public class Account extends Customer {
     public double getEndOfMonthBalance(){
         return(this.endOfMonthBalance);
     }
-    
-    public void setEndOfMonthBalance(Customer customerInfo){
-       this.customerInfo = customerInfo;
-    }
-    public Customer getCustomerInfo(){
-        return(this.customerInfo);
-    }
-       
     
 }
