@@ -185,15 +185,15 @@ public class Customer implements Serializable{
                      if (currAmount < 0.00)
                      {
                      checking.setBalance(currAmount - checking.getOverdraftFee());
-                     checking.transactions.add(new Transactions("Widthdraw", amount));
-                     checking.transactions.add(new Transactions("Overdraft Fee", checking.getOverdraftFee()));
+                     checking.transactions.add(new Transactions("Widthdraw", amount*-1));
+                     checking.transactions.add(new Transactions("Overdraft Fee", checking.getOverdraftFee()*-1));
                      this.saveCustomers();
                      return(true); 
                      }
                      else
                      {
                      checking.setBalance(currAmount);
-                     checking.transactions.add(new Transactions("Widthdraw", amount));
+                     checking.transactions.add(new Transactions("Widthdraw", amount*-1));
                      this.saveCustomers();
                       return(true);
                      }
@@ -211,7 +211,7 @@ public class Customer implements Serializable{
                      else
                      {
                       savings.setBalance(currAmount);
-                      savings.transactions.add(new Transactions("Widthdraw", amount));
+                      savings.transactions.add(new Transactions("Widthdraw", amount*-1));
                       this.saveCustomers();
                       return(true);
                      }   
@@ -242,9 +242,8 @@ public class Customer implements Serializable{
                      else
                      {
                      checking.setBalance(currAmount);
-                     checking.transactions.add(new Transactions("Transfer -> TO -> "+ toAccountID, amount));
+                     checking.transactions.add(new Transactions("Transfer -> TO -> "+ toAccountID, amount*-1));
                      this.saveCustomers();
-                      return(true);
                      }
                 }  
              }
@@ -260,9 +259,8 @@ public class Customer implements Serializable{
                      else
                      {
                       savings.setBalance(currAmount);
-                      savings.transactions.add(new Transactions("Transfer -> TO -> "+ toAccountID, amount));
+                      savings.transactions.add(new Transactions("Transfer -> TO -> "+ toAccountID, amount*-1));
                       this.saveCustomers();
-                      return(true);
                      }   
                 }  
              }
@@ -465,8 +463,8 @@ public class Customer implements Serializable{
                   model.addColumn("Value"); 
                   for (Transactions transaction : checking.transactions) {
                   model.addRow(new Object[]{transaction.getAction(), transaction.getValue()});
-                 return(model);
                  }  
+                  return(model);
          
             }
              }
@@ -477,9 +475,9 @@ public class Customer implements Serializable{
                   model.addColumn("Action");
                   model.addColumn("Value"); 
                   for (Transactions transaction : savings.transactions) {
-                  model.addRow(new Object[]{transaction.getAction(), transaction.getValue()});
-                 return(model);      
-                }  
+                  model.addRow(new Object[]{transaction.getAction(), transaction.getValue()});      
+                } 
+                  return(model);
              }
        }
               for (Loan loan : customer.loanAccounts) {
@@ -490,8 +488,9 @@ public class Customer implements Serializable{
                   model.addColumn("Value"); 
                   for (Transactions transaction : loan.transactions) {
                   model.addRow(new Object[]{transaction.getAction(), transaction.getValue()});
-                 return(model);      
-                }  
+                       
+                }
+                return(model);
              }
         }
         }
@@ -564,7 +563,53 @@ public class Customer implements Serializable{
         return(false);
     }
     
-    
+    //Run End of Month add intrest to Loan Accounts and give interest payments to Savings Accounts
+    public DefaultTableModel endOfMonth(){
+        for (Customer customer : this.customers) {
+            for (int k = 0; k < customer.savingsAccounts.size(); k++) {
+                 Double addIntrest = customer.savingsAccounts.get(k).getBalance() * customer.savingsAccounts.get(k).getinterest();
+                 customer.savingsAccounts.get(k).setBalance(customer.savingsAccounts.get(k).getBalance() + addIntrest);
+             }
+             for (int j = 0; j < customer.loanAccounts.size(); j++) {
+                Double addIntrest = customer.loanAccounts.get(j).getBalance() * customer.loanAccounts.get(j).getInterest();
+                customer.savingsAccounts.get(j).setBalance(customer.savingsAccounts.get(j).getBalance() + addIntrest);  
+             }
+         }
+         DefaultTableModel model = new DefaultTableModel(); 
+                  model.addColumn("Account Type");
+                  model.addColumn("Total Accounts"); 
+                  model.addColumn("Total Balance");
+                  double totalBal = 0.00;
+                  int totalAccount = 0;
+              for (Customer customer : this.customers) {
+                for (Checking checking : customer.checkingAccounts) {
+                    totalBal = totalBal + checking.getBalance();
+                    totalAccount = totalAccount + 1;
+                 }  
+             }
+               model.addRow(new Object[]{"Checking", totalAccount, totalBal});
+               totalBal = 0.00;
+               totalAccount = 0;
+               for (Customer customer : this.customers) {
+                for (Savings savings : customer.savingsAccounts) {
+                    totalBal = totalBal + savings.getBalance();
+                    totalAccount = totalAccount + 1;
+                 }  
+             }
+               model.addRow(new Object[]{"Savings", totalAccount, totalBal});
+               totalBal = 0.00;
+               totalAccount = 0;
+               for (Customer customer : this.customers) {
+                 for (Loan loan : customer.loanAccounts) {
+                    totalBal = totalBal + loan.getBalance();
+                    totalAccount = totalAccount + 1;
+                 }  
+             }
+               model.addRow(new Object[]{"Loan", totalAccount, totalBal});
+               return(model);
+      
+    }
+
     
     
     
