@@ -14,7 +14,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 /**
  *
- * @author makeafide
+ * @author William Smith
  */
 public class Employee implements Serializable {
     // Class Vars
@@ -34,7 +34,7 @@ public class Employee implements Serializable {
     public void setEmployeeName(String employeeName){
      this.employeeName = employeeName; 
     }
-    public String getEmployeename(){
+    public String getEmployeeName(){
         return(this.employeeName);
     }
     
@@ -51,6 +51,7 @@ public class Employee implements Serializable {
     public int getPin(){
         return(this.pin);
     }
+    // Checks if submitted Info is a Valid Employee and Pin
     public boolean login(int employeeID,int pin){
        for (Employee employee : employees) {
        if(employee.getEmployeeID() == employeeID && employee.getPin() == pin){
@@ -59,6 +60,18 @@ public class Employee implements Serializable {
        } 
         return(false);
     }
+    //Removes Employee from ArrayList
+    public boolean removeEmployee(int employeeID){
+         for (int i = 0; i < employees.size(); i++) {
+            if(employees.get(i).employeeID == employeeID){
+             employees.remove(i);
+             return(true);
+            }
+         }
+        return (false);
+    }
+    
+     
     
         public void saveEmployees() throws IOException{
         try{
@@ -73,9 +86,9 @@ public class Employee implements Serializable {
          try{
                 FileInputStream readData = new FileInputStream("employees.dat");
                 ObjectInputStream readStream = new ObjectInputStream(readData);
-                ArrayList<Employee> people2 = (ArrayList<Employee>) readStream.readObject();
+                ArrayList<Employee> employeeRead = (ArrayList<Employee>) readStream.readObject();
                 readStream.close();
-                employees = people2;
+                employees = employeeRead;
              }
              catch (FileNotFoundException esx) {}
              catch (Exception e) {

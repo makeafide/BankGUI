@@ -6,26 +6,26 @@
 
 package GUI;
 
+import java.io.Serializable;
+
 /**
  *
  * @author makeafide
  */
-public class Account {
+public class Account implements Serializable {
     //Class Vars
-    private int accountNum,numOfAccounts;
+    private int accountNum;
     private double balance, endOfMonthBalance;
   
     
     //Constructors 
     public Account (){}
-    public Account (int accountNum, int numOfAccounts, double balance){
+    public Account (int accountNum, double balance){
      this.accountNum = accountNum;
-     this.numOfAccounts = numOfAccounts;
      this.balance = balance;
     }
     public Account (int accountNum, int numOfAccounts, double balance, double endOfMonthBalance){
         this.accountNum = accountNum;
-        this.numOfAccounts = numOfAccounts;
         this.balance = balance;
         this.endOfMonthBalance = endOfMonthBalance;
     }
@@ -36,13 +36,6 @@ public class Account {
     }
     public int getAccountNum(){
         return(this.accountNum);
-    }
-    
-    public void setNumOfAccounts(int numOfAccounts){
-       this.numOfAccounts = numOfAccounts;
-    }
-    public int getNumOfAccounts(){
-        return(this.numOfAccounts);
     }
     
     public void setBalance(double balance){

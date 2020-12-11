@@ -4,26 +4,33 @@
  * and open the template in the editor.
  */
 package GUI;
+
+import java.io.Serializable;
+
 /**
  *
- * @author makeafide
+ * @author William Smith
  */
-public class Checking extends Account {
+public class Checking extends Account implements Serializable {
     //Class Vars
     int numOfTransactions;
     double overdraftFee;
-    Account accountInfo;
     //Constructors
     public Checking(){}
-    public Checking(int numOfTransactions, double overdraftFee){
-        
-        this.numOfTransactions = numOfTransactions;
+    public Checking(double overdraftFee, int accontID, double balance){
+       // System.out.println("checking Vars");
         this.overdraftFee = overdraftFee;
+        this.setAccountNum(accontID);
+        this.setBalance(balance);
+        this.numOfTransactions = 0;
+    }
+    public Checking(Checking checkingInfo){
+       // System.out.println("checking object");
+        this.overdraftFee = checkingInfo.getOverdraftFee();
     }
     
-    
     //Setters and Getters
-    public void setNumOfCustomers(int numOfTransactions){
+    public void setNumOfTransactions(int numOfTransactions){
         this.numOfTransactions = numOfTransactions;
     }
     public int getNumOfTransactions(){
@@ -35,13 +42,6 @@ public class Checking extends Account {
     }
     public double getOverdraftFee(){
         return(this.overdraftFee);
-    }
-    
-    public void setAccountInfo(Account accountInfo){
-        this.accountInfo = accountInfo;
-    }
-    public Account getAccountInfo(){
-        return(this.accountInfo);
     }
     
 }
