@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author makeafide
+ * @author William Smith
  */
 public class Account implements Serializable {
     //Class Vars

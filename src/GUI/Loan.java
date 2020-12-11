@@ -5,13 +5,14 @@
  */
 package GUI;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
- * @author makeafide
+ * @author William Smith
  */
-public class Loan extends Account {
+public class Loan extends Account implements Serializable {
   
 // Class Vars
 double minPayment, lateFee, interest;

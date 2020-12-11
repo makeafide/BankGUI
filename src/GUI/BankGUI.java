@@ -127,6 +127,8 @@ if(currEmployee.employees.size() < 1)
         ViewAcctDetailsBtn = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         acctDetailTable = new javax.swing.JTable();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        acctDetailTrans = new javax.swing.JTable();
         bankDetailsPage = new javax.swing.JPanel();
         lblBankDetails = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -311,23 +313,23 @@ if(currEmployee.employees.size() < 1)
 
         welcomeTxt.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
         welcomeTxt.setForeground(new java.awt.Color(2, 3, 2));
-        welcomeTxt.setText("Welcome");
+        welcomeTxt.setText("Welcome  ");
 
         javax.swing.GroupLayout homePageLayout = new javax.swing.GroupLayout(homePage);
         homePage.setLayout(homePageLayout);
         homePageLayout.setHorizontalGroup(
             homePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(homePageLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, homePageLayout.createSequentialGroup()
+                .addContainerGap(225, Short.MAX_VALUE)
                 .addComponent(welcomeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 469, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addContainerGap())
         );
         homePageLayout.setVerticalGroup(
             homePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(homePageLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(100, 100, 100)
                 .addComponent(welcomeTxt)
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(homePage, "card2");
@@ -545,11 +547,16 @@ if(currEmployee.employees.size() < 1)
         lblMakePayment.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblMakePayment.setText("Make a Payment");
 
-        jLabel16.setText("Please enter the account number you would like to make a payment to:");
+        jLabel16.setText("Account Number:");
 
-        jLabel17.setText("Please enter the amount you would like to pay:");
+        jLabel17.setText("Payment Amount: ");
 
         makePaymentBtn.setText("Make Payment");
+        makePaymentBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                makePaymentBtnActionPerformed(evt);
+            }
+        });
 
         acctNumberMakePayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -561,41 +568,45 @@ if(currEmployee.employees.size() < 1)
         makePaymentPage.setLayout(makePaymentPageLayout);
         makePaymentPageLayout.setHorizontalGroup(
             makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, makePaymentPageLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(lblMakePayment)
-                .addGap(228, 228, 228))
             .addGroup(makePaymentPageLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(52, 52, 52)
-                .addGroup(makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(paymentAmount, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                    .addComponent(acctNumberMakePayment))
-                .addContainerGap(103, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, makePaymentPageLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(makePaymentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(272, 272, 272))
+                .addGroup(makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, makePaymentPageLayout.createSequentialGroup()
+                            .addGap(257, 257, 257)
+                            .addComponent(lblMakePayment)
+                            .addGap(9, 9, 9))
+                        .addGroup(makePaymentPageLayout.createSequentialGroup()
+                            .addGap(234, 234, 234)
+                            .addGroup(makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, makePaymentPageLayout.createSequentialGroup()
+                                    .addComponent(jLabel17)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(paymentAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, makePaymentPageLayout.createSequentialGroup()
+                                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(acctNumberMakePayment, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(makePaymentPageLayout.createSequentialGroup()
+                        .addGap(289, 289, 289)
+                        .addComponent(makePaymentBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
         makePaymentPageLayout.setVerticalGroup(
             makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(makePaymentPageLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblMakePayment)
-                .addGap(26, 26, 26)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(acctNumberMakePayment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                    .addComponent(acctNumberMakePayment, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(makePaymentPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17)
-                    .addComponent(paymentAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
+                    .addComponent(paymentAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17))
+                .addGap(18, 18, 18)
                 .addComponent(makePaymentBtn)
-                .addContainerGap(91, Short.MAX_VALUE))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(makePaymentPage, "card6");
@@ -780,6 +791,19 @@ if(currEmployee.employees.size() < 1)
         ));
         jScrollPane3.setViewportView(acctDetailTable);
 
+        acctDetailTrans.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane5.setViewportView(acctDetailTrans);
+
         javax.swing.GroupLayout acctDetailPageLayout = new javax.swing.GroupLayout(acctDetailPage);
         acctDetailPage.setLayout(acctDetailPageLayout);
         acctDetailPageLayout.setHorizontalGroup(
@@ -801,6 +825,7 @@ if(currEmployee.employees.size() < 1)
                         .addGap(206, 206, 206)
                         .addComponent(lblAcctDetails)))
                 .addContainerGap(247, Short.MAX_VALUE))
+            .addComponent(jScrollPane5)
         );
         acctDetailPageLayout.setVerticalGroup(
             acctDetailPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -814,7 +839,10 @@ if(currEmployee.employees.size() < 1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ViewAcctDetailsBtn)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jLayeredPane1.add(acctDetailPage, "card9");
@@ -1633,8 +1661,8 @@ if(currEmployee.employees.size() < 1)
 
     private void ViewAcctDetailsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewAcctDetailsBtnActionPerformed
         jLayeredPane1.removeAll();
-        System.out.println(Integer.parseInt(acctNumberViewDetails.getText()));
         acctDetailTable.setModel(currCustomers.accountDetails(Integer.parseInt(acctNumberViewDetails.getText())));
+        acctDetailTrans.setModel(currCustomers.accountTrans(Integer.parseInt(acctNumberViewDetails.getText())));
         jLayeredPane1.add(acctDetailPage);
         jLayeredPane1.repaint();
         jLayeredPane1.revalidate(); 
@@ -1749,7 +1777,7 @@ if(currEmployee.employees.size() < 1)
                  currEmployee.saveEmployees();
                  } 
                  catch (IOException ex) {
-                     Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
+                    // Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
                  }
                  catch (NumberFormatException ex){
                    //Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
@@ -1775,7 +1803,7 @@ if(currEmployee.employees.size() < 1)
     try {
         currEmployee.saveEmployees();
     } catch (IOException ex) {
-        Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
+       // Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
     }
         JOptionPane.showMessageDialog(null, "Complete::" + currEmployee.employees.size(), "Message: ", JOptionPane.INFORMATION_MESSAGE);
         jLayeredPane1.removeAll();
@@ -1868,7 +1896,7 @@ if(currEmployee.employees.size() < 1)
              }
         }
         catch (NumberFormatException ex){
-             Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
+             //Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(null, "Account Created FAILED" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);
         }
         // TODO add your handling code here:
@@ -1941,6 +1969,17 @@ if(currEmployee.employees.size() < 1)
         // TODO add your handling code here:
     }//GEN-LAST:event_withdrawBtnActionPerformed
 
+    private void makePaymentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_makePaymentBtnActionPerformed
+        if(currCustomers.makePayment(Integer.parseInt(acctNumberMakePayment.getText()), Double.parseDouble(paymentAmount.getText()))){
+            JOptionPane.showMessageDialog(null, "Payment Complete", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Account Does Not Exist and/or Your attempting to make a payment on an nonvaild account" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);   
+        }
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_makePaymentBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1982,6 +2021,7 @@ if(currEmployee.employees.size() < 1)
     private javax.swing.JButton ViewAcctDetailsBtn;
     private javax.swing.JPanel acctDetailPage;
     private javax.swing.JTable acctDetailTable;
+    private javax.swing.JTable acctDetailTrans;
     private javax.swing.JTable acctList;
     private javax.swing.JTextField acctNumTransferFrom;
     private javax.swing.JTextField acctNumTransferTo;
@@ -2101,6 +2141,7 @@ if(currEmployee.employees.size() < 1)
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JLabel lblAcctDetails;
     private javax.swing.JLabel lblAddAcct;
     private javax.swing.JLabel lblAddAcct1;

@@ -5,34 +5,27 @@
  */
 package GUI;
 
+import java.io.Serializable;
+
 /**
  *
- * @author makeafide
+ * @author William Smith
  */
-public class Transactions {
+public class Transactions implements Serializable{
     //Class Vars
-    int account;
     String action;
     Double value;
     
     //Constructors
     public Transactions(){}
-    public Transactions(int account, String action, Double value){
+    public Transactions(String action, Double value){
     
-        this.account = account;
         this.action = action;
         this.value = value;
     
     }
     
     //Setter and Getters
-    
-    public void setAccount(int account){
-        this.account = account;
-    }
-    public int getAccount(){
-        return(this.account);
-    }
     public void setAction(String action){
         this.action = action;
     }
