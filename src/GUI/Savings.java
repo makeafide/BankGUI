@@ -6,6 +6,7 @@
 package GUI;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,6 +17,7 @@ public class Savings extends Account implements Serializable{
     int numOfTransaction;
     double interest;
     Account accountInfo;
+    ArrayList<Transactions> transactions = new ArrayList<Transactions>();
     
     //Constructors
     public Savings(){}

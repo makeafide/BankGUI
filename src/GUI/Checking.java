@@ -6,6 +6,7 @@
 package GUI;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,6 +16,7 @@ public class Checking extends Account implements Serializable {
     //Class Vars
     int numOfTransactions;
     double overdraftFee;
+    ArrayList<Transactions> transactions = new ArrayList<Transactions>();
     //Constructors
     public Checking(){}
     public Checking(double overdraftFee, int accontID, double balance){

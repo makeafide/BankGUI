@@ -108,6 +108,160 @@ public class Customer implements Serializable{
          }
         return(false);
     }
+    
+   //Attemps to deposit ammount in Either a Checking or Savings Account
+    public boolean makeDeposit(int accountID, Double amount){
+         for (Customer customer : this.customers) {
+             for (Checking checking : customer.checkingAccounts) {
+                if(checking.getAccountNum() == accountID)
+                {
+                     checking.setBalance(checking.getBalance() + amount);
+                     this.saveCustomers();
+                     return(true);    
+                }  
+             }
+             for (Savings savings : customer.savingsAccounts) {
+                if(savings.getAccountNum() == accountID)
+                {
+                     savings.setBalance(savings.getBalance() + amount);
+                     this.saveCustomers();
+                     return(true);    
+                }  
+             }
+             for (Loan loan : customer.loanAccounts) {
+                if(loan.getAccountNum() == accountID)
+                {
+                     return(false);    
+                }  
+             }
+         }
+        return(false);
+    }
+    
+    //Attemps to Widthdraw ammount in Either a Checking or Savings Account
+    public boolean makeWidthdraw(int accountID, Double amount){
+         for (Customer customer : this.customers) {
+             for (Checking checking : customer.checkingAccounts) {
+                if(checking.getAccountNum() == accountID)
+                { 
+                     Double currAmount = 0.00;
+                     currAmount = checking.getBalance() - amount;
+                     if (currAmount < 0.00)
+                     {
+                     checking.setBalance(currAmount - checking.getOverdraftFee());
+                     this.saveCustomers();
+                     return(true); 
+                     }
+                     else
+                     {
+                     checking.setBalance(currAmount);
+                     this.saveCustomers();
+                      return(true);
+                     }
+                }  
+             }
+             for (Savings savings : customer.savingsAccounts) {
+                if(savings.getAccountNum() == accountID)
+                {
+                     Double currAmount = 0.00;
+                     currAmount = savings.getBalance() - amount;
+                     if (currAmount < 0)
+                     {
+                     return(false); 
+                     }
+                     else
+                     {
+                      savings.setBalance(currAmount);
+                      this.saveCustomers();
+                      return(true);
+                     }   
+                }  
+             }
+             for (Loan loan : customer.loanAccounts) {
+                if(loan.getAccountNum() == accountID)
+                {
+                     return(false);    
+                }  
+             }
+         }
+        return(false);
+    }
+    
+    
+        //Attemps to Transfer Funds from one account to another
+        public boolean makeTransfer(int toAccountID, int fromAccountID, Double amount){
+         for (Customer customer : this.customers) {
+             for (Checking checking : customer.checkingAccounts) {
+                if(checking.getAccountNum() == fromAccountID)
+                { 
+                     Double currAmount = 0.00;
+                     currAmount = checking.getBalance() - amount;
+                     if (currAmount < 0.00)
+                     {
+                     return(false); 
+                     }
+                     else
+                     {
+                     checking.setBalance(currAmount);
+                     this.saveCustomers();
+                      return(true);
+                     }
+                }  
+             }
+             for (Savings savings : customer.savingsAccounts) {
+                if(savings.getAccountNum() == fromAccountID)
+                {
+                     Double currAmount = 0.00;
+                     currAmount = savings.getBalance() - amount;
+                     if (currAmount < 0)
+                     {
+                     return(false); 
+                     }
+                     else
+                     {
+                      savings.setBalance(currAmount);
+                      this.saveCustomers();
+                      return(true);
+                     }   
+                }  
+             }
+             for (Loan loan : customer.loanAccounts) {
+                if(loan.getAccountNum() == fromAccountID)
+                {
+                     return(false);    
+                }  
+             }
+
+             for (Checking checkingTo : customer.checkingAccounts) {
+                if(checkingTo.getAccountNum() == toAccountID)
+                {
+                     checkingTo.setBalance(checkingTo.getBalance() + amount);
+                     this.saveCustomers();
+                     return(true);    
+                }  
+             }
+             for (Savings savingsTo : customer.savingsAccounts) {
+                if(savingsTo.getAccountNum() == toAccountID)
+                {
+                     savingsTo.setBalance(savingsTo.getBalance() + amount);
+                     this.saveCustomers();
+                     return(true);    
+                }  
+             }
+             for (Loan loanTo : customer.loanAccounts) {
+                if(loanTo.getAccountNum() == toAccountID)
+                {
+                     this.makeDeposit(fromAccountID,amount);
+                     return(false);    
+                }  
+             }
+         
+         }
+        this.makeDeposit(fromAccountID,amount);
+        return(false);
+    }
+    
+    
     //Creates a Checking account for a Customer     
     public Boolean createChecking(Customer customerInfo, Checking checkingInfo){
         //System.out.println("Cust::" + customerInfo.getCustomerID());
@@ -157,7 +311,7 @@ public class Customer implements Serializable{
         else{
                  if(!accountExists(savingsInfo.getAccountNum())){
                      //System.out.println("passed 1");
-                     customers.get(customerExistsIndex(customerInfo.getCustomerID())).checkingAccounts.add(new Checking(savingsInfo.getinterest(), savingsInfo.getAccountNum(), savingsInfo.getBalance()));
+                     customers.get(customerExistsIndex(customerInfo.getCustomerID())).savingsAccounts.add(new Savings(savingsInfo.getinterest(), savingsInfo.getAccountNum(), savingsInfo.getBalance()));
                      this.saveCustomers();
                      return (true);
                 }  
@@ -203,7 +357,7 @@ public class Customer implements Serializable{
     public DefaultTableModel accountDetails(int accountID){
         for (Customer customer : this.customers) {
              for (Checking checking : customer.checkingAccounts) {
-                //f System.out.println("Found customer:: " + customer.checkingAccounts.size());
+                // System.out.println("Found customer:: " + customer.checkingAccounts.size());
                  if(checking.getAccountNum() == accountID)
                  {
                     
@@ -310,10 +464,10 @@ public class Customer implements Serializable{
                     return(true);    
                 }  
              }
-             for (int k = 0; k < customer.loanAccounts.size(); k++) {
-                  if(customer.loanAccounts.get(k).getAccountNum() == accountID){
+             for (int j = 0; j < customer.loanAccounts.size(); j++) {
+                  if(customer.loanAccounts.get(j).getAccountNum() == accountID){
                 
-                    customer.loanAccounts.remove(k);
+                    customer.loanAccounts.remove(j);
                     return(true);    
                 }  
              }

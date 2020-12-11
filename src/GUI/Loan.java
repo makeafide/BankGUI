@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package GUI;
+
+import java.util.ArrayList;
+
 /**
  *
  * @author makeafide
@@ -13,6 +16,7 @@ public class Loan extends Account {
 // Class Vars
 double minPayment, lateFee, interest;
 int numOfTransaction;
+ArrayList<Transactions> transactions = new ArrayList<Transactions>();
   //Constructors  
   public Loan(){} 
   public Loan (double minPayment,double lateFee,double interest){
