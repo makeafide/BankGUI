@@ -1825,12 +1825,8 @@ if(currEmployee.employees.size() < 1)
 
     private void initSetupCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_initSetupCreateActionPerformed
     //Create the first Employee account on first run if employee.dat does not exist
-    currEmployee.employees.add(new Employee(initEmpName1.getText(),Integer.parseInt(initEmpId1.getText()),Integer.parseInt(String.valueOf(initEmpPin1.getPassword()))));
     try {
-        currEmployee.saveEmployees();
-    } catch (IOException ex) {
-       // Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
-    }
+        currEmployee.employees.add(new Employee(initEmpName1.getText(),Integer.parseInt(initEmpId1.getText()),Integer.parseInt(String.valueOf(initEmpPin1.getPassword()))));
         JOptionPane.showMessageDialog(null, "Complete", "Message: ", JOptionPane.INFORMATION_MESSAGE);
         jLayeredPane1.removeAll();
         jLayeredPane1.add(login);
@@ -1841,7 +1837,15 @@ if(currEmployee.employees.size() < 1)
         menuPayments.setEnabled(false);
         menuAccts.setEnabled(false);
         menuBank.setEnabled(false);
-        logout.setEnabled(false);    
+        logout.setEnabled(false); 
+        currEmployee.saveEmployees();
+    } catch (IOException ex) {
+       // Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    catch (NumberFormatException ex){
+             //Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Account Creation Failed", "Error: ", JOptionPane.INFORMATION_MESSAGE);
+        }   
         initEmpName1.setText("");
         initEmpId1.setText("");
         initEmpPin1.setText("");
@@ -1873,12 +1877,12 @@ if(currEmployee.employees.size() < 1)
                 JOptionPane.showMessageDialog(null, "Account Created Successfully", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
              }
          else{
-                JOptionPane.showMessageDialog(null, "Account Created FAILED" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);   
+                JOptionPane.showMessageDialog(null, "Account Creation Failed" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);   
              }
         }
         catch (NumberFormatException ex){
              //Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Account Created FAILED" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Account Creation Failed" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);
         }
      checkCustName.setText("");
      checkCustomerID.setText("");
@@ -1931,12 +1935,12 @@ if(currEmployee.employees.size() < 1)
                 JOptionPane.showMessageDialog(null, "Account Created Successfully", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
              }
          else{
-                JOptionPane.showMessageDialog(null, "Account Created FAILED" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);   
+                JOptionPane.showMessageDialog(null, "Account Creation Failed", "Error: ", JOptionPane.INFORMATION_MESSAGE);   
              }
         }
         catch (NumberFormatException ex){
              //Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Account Created FAILED" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Account Creation Failed", "Error: ", JOptionPane.INFORMATION_MESSAGE);
         }
     addLoanCustNsme.setText("");
     addLoanCustId.setText("");
@@ -1955,12 +1959,12 @@ if(currEmployee.employees.size() < 1)
                     JOptionPane.showMessageDialog(null, "Account Created Successfully", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
                 }
                 else{
-                    JOptionPane.showMessageDialog(null, "Account Created FAILED" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);   
+                    JOptionPane.showMessageDialog(null, "Account Creation Failed", "Error: ", JOptionPane.INFORMATION_MESSAGE);   
                 }
             }
         catch (NumberFormatException ex){
              //Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Account Created FAILED" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Account Creation Failed", "Error: ", JOptionPane.INFORMATION_MESSAGE);
         }
        addSavingsCustName.setText("");
        addSavingsCustId.setText("");    
