@@ -410,7 +410,7 @@ public class Customer implements Serializable{
                   model.addColumn("Balance"); 
                   model.addColumn("OverDraft Fee");
                   model.addColumn("Total Transactions");
-                  model.addRow(new Object[]{"Checking", customer.getCustomerName(), customer.getCustomerID(), checking.getAccountNum(), checking.getBalance(), checking.getOverdraftFee(), checking.getNumOfTransactions()});
+                  model.addRow(new Object[]{"Checking", customer.getCustomerName(), customer.getCustomerID(), checking.getAccountNum(), checking.getBalance(), checking.getOverdraftFee(), checking.transactions.size()});
                  return(model);
                  }  
          
@@ -426,7 +426,7 @@ public class Customer implements Serializable{
                   model.addColumn("Balance"); 
                   model.addColumn("Interest Rate");
                   model.addColumn("Total Transactions");
-                  model.addRow(new Object[]{"Savings", customer.getCustomerName(), customer.getCustomerID(), savings.getAccountNum(), savings.getBalance(), savings.getinterest(), savings.getNumOfTransaction()});
+                  model.addRow(new Object[]{"Savings", customer.getCustomerName(), customer.getCustomerID(), savings.getAccountNum(), savings.getBalance(), savings.getinterest(), savings.transactions.size()});
                  return(model);      
                 }  
              }
@@ -443,7 +443,7 @@ public class Customer implements Serializable{
                   model.addColumn("Late Fee");
                   model.addColumn("Interest");
                   model.addColumn("Total Transactions");
-                  model.addRow(new Object[]{"Loan", customer.getCustomerName(), customer.getCustomerID(), loan.getAccountNum(), loan.getBalance(), loan.getMinPayment(), loan.getLateFee(), loan.getInterest(), loan.getNumOfTransaction()});
+                  model.addRow(new Object[]{"Loan", customer.getCustomerName(), customer.getCustomerID(), loan.getAccountNum(), loan.getBalance(), loan.getMinPayment(), loan.getLateFee(), loan.getInterest(), loan.transactions.size()});
                  return(model);      
                 }  
              }
@@ -610,21 +610,6 @@ public class Customer implements Serializable{
       
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // Dumps current customer and Account Data to file
     public void saveCustomers(){
         try{

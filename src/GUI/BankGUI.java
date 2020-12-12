@@ -365,23 +365,21 @@ if(currEmployee.employees.size() < 1)
             .addGroup(depositPageLayout.createSequentialGroup()
                 .addGroup(depositPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(depositPageLayout.createSequentialGroup()
-                        .addGap(286, 286, 286)
-                        .addComponent(lblDeposit, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(depositPageLayout.createSequentialGroup()
                         .addGap(248, 248, 248)
                         .addGroup(depositPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(depositPageLayout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(acctNumberDeposit, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(depositPageLayout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(18, 18, 18)
-                                .addComponent(depositAmt, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6))
+                        .addGap(18, 18, 18)
+                        .addGroup(depositPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(depositAmt, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(acctNumberDeposit, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(depositPageLayout.createSequentialGroup()
-                        .addGap(285, 285, 285)
+                        .addGap(292, 292, 292)
+                        .addComponent(lblDeposit, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(depositPageLayout.createSequentialGroup()
+                        .addGap(292, 292, 292)
                         .addComponent(depsoitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(269, Short.MAX_VALUE))
+                .addContainerGap(255, Short.MAX_VALUE))
         );
         depositPageLayout.setVerticalGroup(
             depositPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -396,9 +394,9 @@ if(currEmployee.employees.size() < 1)
                 .addGroup(depositPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(depositAmt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addGap(13, 13, 13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(depsoitBtn)
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(depositPage, "card3");
@@ -495,35 +493,31 @@ if(currEmployee.employees.size() < 1)
             .addGroup(transferPageLayout.createSequentialGroup()
                 .addGroup(transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(transferPageLayout.createSequentialGroup()
-                        .addGap(258, 258, 258)
-                        .addGroup(transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(233, 233, 233)
                         .addGroup(transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(acctNumTransferFrom, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(acctNumTransferTo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(transferPageLayout.createSequentialGroup()
-                        .addGap(239, 239, 239)
-                        .addComponent(jLabel14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(transferAmt, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(284, Short.MAX_VALUE))
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(transferAmt, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(acctNumTransferTo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(acctNumTransferFrom, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, transferPageLayout.createSequentialGroup()
+                        .addGap(226, 226, 226)
+                        .addComponent(lblTransfer)))
+                .addGap(0, 290, Short.MAX_VALUE))
             .addGroup(transferPageLayout.createSequentialGroup()
-                .addGroup(transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(transferPageLayout.createSequentialGroup()
-                        .addGap(246, 246, 246)
-                        .addComponent(lblTransfer))
-                    .addGroup(transferPageLayout.createSequentialGroup()
-                        .addGap(290, 290, 290)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(279, 279, 279)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         transferPageLayout.setVerticalGroup(
             transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(transferPageLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblTransfer)
+                .addGap(28, 28, 28)
                 .addGroup(transferPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(transferPageLayout.createSequentialGroup()
                         .addGap(38, 38, 38)
@@ -539,7 +533,7 @@ if(currEmployee.employees.size() < 1)
                         .addComponent(jLabel12)))
                 .addGap(18, 18, 18)
                 .addComponent(jButton2)
-                .addContainerGap(213, Short.MAX_VALUE))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(transferPage, "card5");
@@ -641,44 +635,42 @@ if(currEmployee.employees.size() < 1)
                 .addGap(54, 54, 54)
                 .addGroup(addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCheckingAcctPageLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lblAddAcct)
-                        .addGap(218, 218, 218))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addCheckingAcctPageLayout.createSequentialGroup()
-                        .addGroup(addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addCheckingAcctPageLayout.createSequentialGroup()
-                                .addGroup(addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel23)
-                                    .addComponent(jLabel24, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(checkCustName)
-                                    .addComponent(checkCustomerID)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addCheckingAcctPageLayout.createSequentialGroup()
-                                .addGroup(addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel26)
-                                    .addComponent(jLabel27))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel26)
+                            .addComponent(jLabel27)
+                            .addComponent(jLabel28))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(addCheckingAcctPageLayout.createSequentialGroup()
+                                .addGroup(addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                                    .addComponent(checkCustName, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+                                    .addComponent(checkCustomerID)
                                     .addComponent(checkOverDraft)
-                                    .addComponent(checkAcctNum)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addCheckingAcctPageLayout.createSequentialGroup()
-                                .addComponent(jLabel28)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(checkStartingBal, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(227, 227, 227))))
+                                    .addComponent(checkAcctNum))
+                                .addGap(227, 227, 227))
+                            .addGroup(addCheckingAcctPageLayout.createSequentialGroup()
+                                .addComponent(checkStartingBal, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(addCheckingAcctPageLayout.createSequentialGroup()
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(addCheckingAcctPageLayout.createSequentialGroup()
+                .addGap(242, 242, 242)
+                .addComponent(lblAddAcct)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         addCheckingAcctPageLayout.setVerticalGroup(
             addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(addCheckingAcctPageLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblAddAcct)
                 .addGroup(addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(addCheckingAcctPageLayout.createSequentialGroup()
-                        .addGap(110, 110, 110)
+                        .addGap(150, 150, 150)
                         .addComponent(jLabel25))
                     .addGroup(addCheckingAcctPageLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblAddAcct)
                         .addGap(18, 18, 18)
                         .addGroup(addCheckingAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel23)
@@ -812,26 +804,26 @@ if(currEmployee.employees.size() < 1)
                 .addComponent(acctNumberViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(262, 262, 262))
             .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jScrollPane5)
             .addGroup(acctDetailPageLayout.createSequentialGroup()
                 .addGroup(acctDetailPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(acctDetailPageLayout.createSequentialGroup()
-                        .addGap(151, 151, 151)
+                        .addGap(216, 216, 216)
                         .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(acctDetailPageLayout.createSequentialGroup()
-                        .addGap(254, 254, 254)
+                        .addGap(307, 307, 307)
                         .addComponent(ViewAcctDetailsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(acctDetailPageLayout.createSequentialGroup()
-                        .addGap(206, 206, 206)
+                        .addGap(249, 249, 249)
                         .addComponent(lblAcctDetails)))
-                .addContainerGap(247, Short.MAX_VALUE))
-            .addComponent(jScrollPane5)
+                .addContainerGap(277, Short.MAX_VALUE))
         );
         acctDetailPageLayout.setVerticalGroup(
             acctDetailPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(acctDetailPageLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(16, 16, 16)
                 .addComponent(lblAcctDetails)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(acctDetailPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(acctNumberViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE))
@@ -1160,32 +1152,32 @@ if(currEmployee.employees.size() < 1)
                 .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
                 .addGroup(addLoanAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel46, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(addLoanAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(addLoanStartBalance1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addLoanLateFee, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addLoanAcctNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addLoanMinPay, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addLoanIntrest, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addLoanCustId, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(addLoanCustNsme, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 233, Short.MAX_VALUE))
+                    .addGroup(addLoanAcctPageLayout.createSequentialGroup()
+                        .addGroup(addLoanAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel46, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(addLoanAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                            .addComponent(addLoanStartBalance1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(addLoanLateFee, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(addLoanAcctNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(addLoanMinPay, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(addLoanIntrest, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(addLoanCustId, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(addLoanCustNsme, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(addLoanAcctPageLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addLoanAcctPageLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(addLoanAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addLoanAcctPageLayout.createSequentialGroup()
-                        .addComponent(lblAddAcct1)
-                        .addGap(243, 243, 243))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addLoanAcctPageLayout.createSequentialGroup()
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(233, 233, 233))))
+                .addContainerGap(248, Short.MAX_VALUE)
+                .addComponent(lblAddAcct1)
+                .addGap(243, 243, 243))
         );
 
         addLoanAcctPageLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addLoanAcctNum1, addLoanCustId, addLoanCustNsme, addLoanIntrest, addLoanLateFee, addLoanMinPay, addLoanStartBalance1});
@@ -1228,9 +1220,9 @@ if(currEmployee.employees.size() < 1)
                 .addGroup(addLoanAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(addLoanStartBalance1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel45))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton5)
-                .addContainerGap())
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         jLayeredPane1.add(addLoanAcctPage, "card7");
@@ -1259,9 +1251,12 @@ if(currEmployee.employees.size() < 1)
         addSavingsAcctPage.setLayout(addSavingsAcctPageLayout);
         addSavingsAcctPageLayout.setHorizontalGroup(
             addSavingsAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(addSavingsAcctPageLayout.createSequentialGroup()
-                .addGroup(addSavingsAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addSavingsAcctPageLayout.createSequentialGroup()
+                .addGroup(addSavingsAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(addSavingsAcctPageLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lblAddAcct2))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, addSavingsAcctPageLayout.createSequentialGroup()
                         .addGap(116, 116, 116)
                         .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
@@ -1282,10 +1277,6 @@ if(currEmployee.employees.size() < 1)
                         .addGap(243, 243, 243)
                         .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(218, 218, 218))
-            .addGroup(addSavingsAcctPageLayout.createSequentialGroup()
-                .addGap(215, 215, 215)
-                .addComponent(lblAddAcct2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         addSavingsAcctPageLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addSavingsAcctBal, addSavingsAcctNum, addSavingsCustId, addSavingsCustName, addSavingsIntrrest});
@@ -1317,7 +1308,7 @@ if(currEmployee.employees.size() < 1)
                             .addComponent(jLabel39)
                             .addComponent(addSavingsAcctNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(9, 9, 9)
-                        .addGroup(addSavingsAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(addSavingsAcctPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(addSavingsAcctBal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel40))))
                 .addGap(18, 18, 18)
@@ -1590,6 +1581,7 @@ if(currEmployee.employees.size() < 1)
     
     private void menuTransferActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTransferActionPerformed
         // TODO add your handling code here:
+        //Displays the Transfer Page.
         jLayeredPane1.removeAll();
         jLayeredPane1.add(transferPage);
         jLayeredPane1.repaint();
@@ -1599,6 +1591,7 @@ if(currEmployee.employees.size() < 1)
 
     private void menuDepositActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuDepositActionPerformed
         // TODO add your handling code here:
+        //Displays the Deposit page. 
         jLayeredPane1.removeAll();
         jLayeredPane1.add(depositPage);
         jLayeredPane1.repaint();
@@ -1611,6 +1604,7 @@ if(currEmployee.employees.size() < 1)
 
     private void menuWithdrawActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuWithdrawActionPerformed
         // TODO add your handling code here:
+        //Display the Widthdraw Page 
         jLayeredPane1.removeAll();
         jLayeredPane1.add(withdrawPage);
         jLayeredPane1.repaint();
@@ -1618,7 +1612,8 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_menuWithdrawActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
- try{
+      //Attemps to Proccess a Trassfer of funds between two accounts 
+        try{
           if(currCustomers.makeTransfer(Integer.parseInt(acctNumTransferTo.getText()), Integer.parseInt(acctNumTransferFrom.getText()), Double.parseDouble(transferAmt.getText()))){
                 JOptionPane.showMessageDialog(null, "Account Transfer Completed", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
              }
@@ -1646,6 +1641,7 @@ if(currEmployee.employees.size() < 1)
 
     private void menuMakePaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuMakePaymentActionPerformed
         // TODO add your handling code here:
+        //Displays the Making Payment Page
         jLayeredPane1.removeAll();
         bankMenuBar.setEnabled(false);
         jLayeredPane1.add(makePaymentPage);
@@ -1659,6 +1655,7 @@ if(currEmployee.employees.size() < 1)
 
     private void menuRemoveAcctActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRemoveAcctActionPerformed
         // TODO add your handling code here:
+        //Displays the Delete Account Page
         jLayeredPane1.removeAll();
         jLayeredPane1.add(deleteAcctPage);
         jLayeredPane1.repaint();
@@ -1670,6 +1667,7 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_acctNumberViewDetailsActionPerformed
 
     private void ViewAcctDetailsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewAcctDetailsBtnActionPerformed
+       //Attempts to find account details of the provided account ID
         try{
             jLayeredPane1.removeAll();
             acctDetailTable.setModel(currCustomers.accountDetails(Integer.parseInt(acctNumberViewDetails.getText())));
@@ -1688,6 +1686,7 @@ if(currEmployee.employees.size() < 1)
 
     private void menuAcctsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAcctsActionPerformed
         // TODO add your handling code here:
+        //Displays the Account Detail page 
         jLayeredPane1.removeAll();
         jLayeredPane1.add(acctDetailPage);
         jLayeredPane1.repaint();
@@ -1696,6 +1695,7 @@ if(currEmployee.employees.size() < 1)
 
     private void menuBankDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuBankDetailsActionPerformed
         // TODO add your handling code here:
+        //Displays the End of Month process page
         jLayeredPane1.removeAll();
         jLayeredPane1.add(bankDetailsPage);
         jLayeredPane1.repaint();
@@ -1705,6 +1705,7 @@ if(currEmployee.employees.size() < 1)
 
     private void menuViewAcctActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuViewAcctActionPerformed
         // TODO add your handling code here:
+        //Displays the Account detail page
         jLayeredPane1.removeAll();
         jLayeredPane1.add(acctDetailPage);
         jLayeredPane1.repaint();
@@ -1716,6 +1717,7 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_acctNumberDepositActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+       //Displays the add Employee page
         jLayeredPane1.removeAll();
         jLayeredPane1.add(addEmployee);
         jLayeredPane1.repaint();
@@ -1724,6 +1726,7 @@ if(currEmployee.employees.size() < 1)
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        //Temps to log the current user in with supplied ID and Pin
         try{
         if(currEmployee.login(Integer.parseInt(loginEmpID.getText()), Integer.parseInt(String.valueOf(loginEmpPin.getPassword())))){
             jLayeredPane1.removeAll();
@@ -1764,6 +1767,7 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_logoutMenuKeyPressed
 
     private void logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseClicked
+       //Logouts out the current user
         jLayeredPane1.removeAll();
         jLayeredPane1.add(login);
         jLayeredPane1.repaint();
@@ -1777,6 +1781,7 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_logoutMouseClicked
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        //Displays the Remove Employee page
         jLayeredPane1.removeAll();
         jLayeredPane1.add(removeEmployee);
         jLayeredPane1.repaint();
@@ -1785,7 +1790,8 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-         try {
+        //Creates new Employee account
+        try {
                  if(currEmployee.employees.add(new Employee(addEmpName.getText(),Integer.parseInt(addEmpId.getText()),Integer.parseInt(String.valueOf(addEmpPin.getPassword()))))){
                     JOptionPane.showMessageDialog(null, "Complete::" + currEmployee.employees.size(), "Message: ", JOptionPane.INFORMATION_MESSAGE);
                 }
@@ -1818,13 +1824,14 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_formWindowOpened
 
     private void initSetupCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_initSetupCreateActionPerformed
-        currEmployee.employees.add(new Employee(initEmpName1.getText(),Integer.parseInt(initEmpId1.getText()),Integer.parseInt(String.valueOf(initEmpPin1.getPassword()))));
+    //Create the first Employee account on first run if employee.dat does not exist
+    currEmployee.employees.add(new Employee(initEmpName1.getText(),Integer.parseInt(initEmpId1.getText()),Integer.parseInt(String.valueOf(initEmpPin1.getPassword()))));
     try {
         currEmployee.saveEmployees();
     } catch (IOException ex) {
        // Logger.getLogger(BankGUI.class.getName()).log(Level.SEVERE, null, ex);
     }
-        JOptionPane.showMessageDialog(null, "Complete::" + currEmployee.employees.size(), "Message: ", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Complete", "Message: ", JOptionPane.INFORMATION_MESSAGE);
         jLayeredPane1.removeAll();
         jLayeredPane1.add(login);
         jLayeredPane1.repaint();
@@ -1842,6 +1849,7 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_initSetupCreateActionPerformed
 
     private void addCheckingMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCheckingMenuActionPerformed
+        //Displays the Add loan Page
         jLayeredPane1.removeAll();
         jLayeredPane1.add(addCheckingAcctPage);
         jLayeredPane1.repaint();
@@ -1849,6 +1857,7 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_addCheckingMenuActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        //Displays the create Loans Page
         jLayeredPane1.removeAll();
         jLayeredPane1.add(addLoanAcctPage);
         jLayeredPane1.repaint();
@@ -1857,7 +1866,8 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-    //System.out.println(Integer.parseInt(checkAcctNum.getText()));
+        //Attempts to Create a Checking Account by calling the
+//System.out.println(Integer.parseInt(checkAcctNum.getText()));
     try{
           if(currCustomers.createChecking(new Customer(checkCustName.getText(), Integer.parseInt(checkCustomerID.getText())), new Checking(Double.parseDouble(checkOverDraft.getText()),Integer.parseInt(checkAcctNum.getText()), Double.parseDouble(checkStartingBal.getText())))){
                 JOptionPane.showMessageDialog(null, "Account Created Successfully", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
@@ -1882,7 +1892,8 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_removeEmpIdActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-      try{ 
+      //Attempts to remove and Employee by calling the removeEmployee() Method 
+        try{ 
             if(currEmployee.removeEmployee(Integer.parseInt(removeEmpId.getText()))){
                 JOptionPane.showMessageDialog(null, "Employee " + removeEmpId.getText() + " was Removed", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
             }
@@ -1899,9 +1910,8 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        //Displays the list all Employees page and displays the data in the table
         jLayeredPane1.removeAll();
-        
-        
         DefaultTableModel model = new DefaultTableModel(); 
         model.addColumn("Employee ID"); 
         model.addColumn("Employee Name"); 
@@ -1915,7 +1925,8 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-    try{
+    //attemps to create a Loan Account my calling the create Loan method
+        try{
           if(currCustomers.createLoan(new Customer(addLoanCustNsme.getText(), Integer.parseInt(addLoanCustId.getText())), new Loan(Double.parseDouble(addLoanMinPay.getText()),Double.parseDouble(addLoanLateFee.getText()), Double.parseDouble(addLoanIntrest.getText()), Double.parseDouble(addLoanStartBalance1.getText()), Integer.parseInt(addLoanAcctNum1.getText())))){
                 JOptionPane.showMessageDialog(null, "Account Created Successfully", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
              }
@@ -1938,6 +1949,7 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        //Attemps to create a savings account by calling the createSavings method
         try{ 
                 if(currCustomers.createSavings(new Customer(addSavingsCustName.getText(), Integer.parseInt(addSavingsCustId.getText())), new Savings(Double.parseDouble(addSavingsIntrrest.getText()),Integer.parseInt(addSavingsAcctNum.getText()), Double.parseDouble(addSavingsAcctBal.getText())))){
                     JOptionPane.showMessageDialog(null, "Account Created Successfully", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
@@ -1960,6 +1972,7 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        //Displays the view all accounts page
         jLayeredPane1.removeAll();
         acctList.setModel(currCustomers.listAllAccounts());
         jLayeredPane1.add(viewAccounts);
@@ -1968,6 +1981,7 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        //Displays the savings page 
         jLayeredPane1.removeAll();
         acctList.setModel(currCustomers.listAllAccounts());
         jLayeredPane1.add(addSavingsAcctPage);
@@ -1978,22 +1992,24 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void removeAcctBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeAcctBtnActionPerformed
+        //Preforms the actions and methods required to 
         if(currCustomers.removeAccount(Integer.parseInt(acctNumberRemoveAcct.getText()))){
             JOptionPane.showMessageDialog(null, "Account Removed Successfully", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
         }
         else{
-            JOptionPane.showMessageDialog(null, "Account Does Not Exist" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);   
+            JOptionPane.showMessageDialog(null, "Account Does Not Exist", "Error: ", JOptionPane.INFORMATION_MESSAGE);   
         } 
         acctNumberRemoveAcct.setText("");
         // TODO add your handling code here:
     }//GEN-LAST:event_removeAcctBtnActionPerformed
 
     private void depsoitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_depsoitBtnActionPerformed
-       if(currCustomers.makeDeposit(Integer.parseInt(acctNumberDeposit.getText()), Double.parseDouble(depositAmt.getText()))){
+       //Processes a Deposit to an account
+        if(currCustomers.makeDeposit(Integer.parseInt(acctNumberDeposit.getText()), Double.parseDouble(depositAmt.getText()))){
             JOptionPane.showMessageDialog(null, "Account Deposit Complete", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
         }
         else{
-            JOptionPane.showMessageDialog(null, "Account Does Not Exist and/or Your attempting to deposit to a Loan Account" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);   
+            JOptionPane.showMessageDialog(null, "Account Does Not Exist and/or Your attempting to deposit to a Loan Account", "Error: ", JOptionPane.INFORMATION_MESSAGE);   
         }  
        acctNumberDeposit.setText("");
        depositAmt.setText("");
@@ -2001,11 +2017,12 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_depsoitBtnActionPerformed
 
     private void withdrawBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_withdrawBtnActionPerformed
+        //Preforms the actions required to widthdraw funds from accouts. 
         if(currCustomers.makeWidthdraw(Integer.parseInt(acctNumberWithdraw.getText()), Double.parseDouble(withdrawAmt.getText()))){
             JOptionPane.showMessageDialog(null, "Account Withdraw Complete", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
         }
         else{
-            JOptionPane.showMessageDialog(null, "Account Does Not Exist and/or Your attempting to widthdraw from a Loan Account and/or Your low on funds and account type does not allow for a OverDraft" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);   
+            JOptionPane.showMessageDialog(null, "Account Does Not Exist and/or Your attempting to widthdraw from a Loan Account and/or Your low on funds and account type does not allow for a OverDraft", "Error: ", JOptionPane.INFORMATION_MESSAGE);   
         }
         acctNumberWithdraw.setText("");
         withdrawAmt.setText("");
@@ -2013,11 +2030,12 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_withdrawBtnActionPerformed
 
     private void makePaymentBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_makePaymentBtnActionPerformed
+        //Preforms the methods required to make a payment
         if(currCustomers.makePayment(Integer.parseInt(acctNumberMakePayment.getText()), Double.parseDouble(paymentAmount.getText()))){
             JOptionPane.showMessageDialog(null, "Payment Complete", "Message: ", JOptionPane.INFORMATION_MESSAGE);   
         }
         else{
-            JOptionPane.showMessageDialog(null, "Account Does Not Exist and/or Your attempting to make a payment on an nonvaild account" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);   
+            JOptionPane.showMessageDialog(null, "Account Does Not Exist and/or Your attempting to make a payment below the minmum payment ammount" + currCustomers.customers.size(), "Error: ", JOptionPane.INFORMATION_MESSAGE);   
         }
         acctNumberMakePayment.setText("");
         paymentAmount.setText("");
@@ -2025,6 +2043,7 @@ if(currEmployee.employees.size() < 1)
     }//GEN-LAST:event_makePaymentBtnActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        //Runs End of the Month Process
         jLayeredPane1.removeAll();
         endOfMonthTable.setModel(currCustomers.endOfMonth());
         jLayeredPane1.add(bankDetailsPage);
