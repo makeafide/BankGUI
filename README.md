@@ -99,3 +99,10 @@ $Pin:
 
 #Resetting Log in  
 If the user forgets the employee ID and or pin, delete the “employee.dat” file found in the src folder to force the app to hard restart. 
+
+
+#Contributers 
+Matt Johnson  BankGUI.java / UI Design  
+William Smith Account.java, Checking.java, Employee.java, Savings.java, Customer.java / UI Design 
+Albert Park   loan.java, Customer.java
+Kevin Garcia  Transactions.java, Customer.java readme.md
